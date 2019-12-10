@@ -1,13 +1,13 @@
 package com.yicj.hello;
 
-import org.junit.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+//import org.junit.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 public class HelloBootstrapTest {
 
-    @Test
-    void contextLoads() {
+    //@Test
+    public void contextLoads() {
 
     }
 
