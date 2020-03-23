@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Order(3)
-public class ThirdInitializer implements ApplicationContextInitializer {
+public class ThirdInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext>{
 
     @Override
     public void initialize(ConfigurableApplicationContext applicationContext) {

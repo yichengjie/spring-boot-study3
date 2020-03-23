@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Order(1)
-public class FirstInitializer implements ApplicationContextInitializer {
+public class FirstInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
     @Override
     public void initialize(ConfigurableApplicationContext applicationContext) {
