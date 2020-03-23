@@ -1,4 +1,4 @@
-package com.yicj.hello.controller;
+package com.yicj.api.hello.controller;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Controller;

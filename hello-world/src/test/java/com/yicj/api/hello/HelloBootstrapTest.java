@@ -1,4 +1,4 @@
-package com.yicj.hello;
+package com.yicj.api.hello;
 
 //import org.junit.Test;
 //import org.springframework.boot.test.context.SpringBootTest;
