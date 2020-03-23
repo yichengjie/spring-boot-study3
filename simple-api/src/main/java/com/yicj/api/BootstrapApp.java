@@ -1,11 +1,7 @@
 package com.yicj.api;
 
-import com.yicj.api.component.SecondInitializer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @SpringBootApplication
 public class BootstrapApp {
