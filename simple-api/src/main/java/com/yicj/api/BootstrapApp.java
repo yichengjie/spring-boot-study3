@@ -1,9 +1,8 @@
 package com.yicj.api;
 
-import com.yicj.api.config.AppConfig;
+import com.yicj.api.component.SecondInitializer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 @SpringBootApplication
 public class BootstrapApp {
@@ -11,7 +10,10 @@ public class BootstrapApp {
 //        AnnotationConfigApplicationContext context =
 //                new AnnotationConfigApplicationContext(AppConfig.class) ;
 //        context.close();
-        SpringApplication.run(BootstrapApp.class,args) ;
+        //SpringApplication.run(BootstrapApp.class,args) ;
+        SpringApplication application = new SpringApplication(BootstrapApp.class) ;
+        application.addInitializers(new SecondInitializer());
+        application.run(args) ;
     }
 
 

@@ -18,9 +18,22 @@ public class TestService implements ApplicationContextAware {
         this.applicationContext = applicationContext ;
     }
 
-    public String test(){
+    public String test1(){
         Environment environment = applicationContext.getEnvironment();
-        String key1 = environment.getProperty("key1");
-        return Optional.ofNullable(key1).orElse("default value") ;
+        String key = environment.getProperty("key1");
+        return Optional.ofNullable(key).orElse("default value") ;
+    }
+
+    public String test2(){
+        Environment environment = applicationContext.getEnvironment();
+        String key = environment.getProperty("key2");
+        return Optional.ofNullable(key).orElse("default value") ;
+    }
+
+
+    public String test3(){
+        Environment environment = applicationContext.getEnvironment();
+        String key = environment.getProperty("key3");
+        return Optional.ofNullable(key).orElse("default value") ;
     }
 }
