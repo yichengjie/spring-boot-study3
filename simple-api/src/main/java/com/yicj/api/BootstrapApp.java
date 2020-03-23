@@ -12,6 +12,7 @@ public class BootstrapApp {
         SpringApplication.run(BootstrapApp.class,args) ;
 //        SpringApplication application = new SpringApplication(BootstrapApp.class) ;
 //        application.addInitializers(new SecondInitializer());
+//        application.addListeners(new SecondListener());
 //        application.run(args) ;
 
     }
