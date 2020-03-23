@@ -13,4 +13,8 @@ public class BootstrapApp {
 //        context.close();
         SpringApplication.run(BootstrapApp.class,args) ;
     }
+
+
+
+    public void test(){}
 }
