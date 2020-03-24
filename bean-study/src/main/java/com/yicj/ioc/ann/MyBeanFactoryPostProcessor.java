@@ -7,6 +7,7 @@ import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.stereotype.Component;
 
+//BeanFactoryPostProcessor主要作用是在bean的实例化之前给bean添加一些属性
 @Component
 public class MyBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
     @Override

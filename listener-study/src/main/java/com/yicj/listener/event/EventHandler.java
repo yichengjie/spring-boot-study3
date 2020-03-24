@@ -1,16 +1,14 @@
-package com.yicj.api.event;
+package com.yicj.listener.event;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-//在三个类上层在写一个类，屏蔽对这个三个类具体细节的调用
 @Component
 public class EventHandler implements ApplicationListener<ContextRefreshedEvent> {
 
@@ -42,8 +40,6 @@ public class EventHandler implements ApplicationListener<ContextRefreshedEvent> 
         }
 
     }
-
-
     public void handleEvent(StatusChangedEvent event){
         Set<EventExecutor> eventExecutors = executorMap.get(event.getTag());
         eventExecutors.forEach(executor -> executor.handleEvent(event));
