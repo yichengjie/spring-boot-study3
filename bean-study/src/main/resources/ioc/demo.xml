@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.yicj.ioc.model.Student">
+<!--        <property name="name" value="zhangsan" />-->
+<!--        <property name="age" value="13" />-->
+        <constructor-arg index="0" value="zhangsan" />
+        <constructor-arg index="1" value="13" />
+        <property name="classList">
+            <list>
+                <value>math</value>
+                <value>english</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="helloService" class="com.yicj.ioc.service.HelloService">
+        <property name="student" ref="student" />
+        <property name="animal" ref="cat" />
+    </bean>
+
+    <bean id="animalFactory" class="com.yicj.ioc.xml.AnimalFactory" />
+
+    <!--
+       静态工厂，对应的静态方法
+    <bean id="dog" class="AnimalFactory" factory-method="getAnimal">
+        <constructor-arg value="dog" />
+    </bean>-->
+
+    <bean id="cat" factory-bean="animalFactory" factory-method="getAnimal">
+        <constructor-arg value="cat" />
+    </bean>
+</beans>

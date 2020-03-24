@@ -15,6 +15,9 @@
     <modules>
         <module>hello-world</module>
         <module>simple-api</module>
+        <module>bean-study</module>
+        <module>Initializer-study</module>
+        <module>listener-study</module>
     </modules>
 
     <groupId>com.yicj.study</groupId>

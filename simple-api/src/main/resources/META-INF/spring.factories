@@ -1,2 +1,0 @@
-org.springframework.context.ApplicationContextInitializer=com.yicj.api.component.FirstInitializer
-org.springframework.context.ApplicationListener=com.yicj.api.listener.FirstListener,com.yicj.api.listener.FourthListener
