@@ -18,6 +18,7 @@
         <module>bean-study</module>
         <module>Initializer-study</module>
         <module>listener-study</module>
+        <module>startup-study</module>
     </modules>
 
     <groupId>com.yicj.study</groupId>
