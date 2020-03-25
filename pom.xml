@@ -46,6 +46,7 @@
         </dependency>
 
 
+        <!-- spring 单元测试 start -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -55,6 +56,7 @@
             <groupId>net.bytebuddy</groupId>
             <artifactId>byte-buddy</artifactId>
         </dependency>
+        <!-- spring 单元测试 end -->
     </dependencies>
 
    <!-- <dependencyManagement>
