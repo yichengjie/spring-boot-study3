@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyAwareProcessor implements BeanPostProcessor {
     private ApplicationContext ac ;
+    //这里会自动注入进ApplicationContext
     public MyAwareProcessor(ApplicationContext ac){
         this.ac = ac ;
     }
