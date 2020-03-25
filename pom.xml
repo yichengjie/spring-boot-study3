@@ -19,7 +19,7 @@
         <module>Initializer-study</module>
         <module>listener-study</module>
         <module>startup-study</module>
-        <module>property-conf-study</module>
+        <module>property-study</module>
     </modules>
 
     <groupId>com.yicj.study</groupId>

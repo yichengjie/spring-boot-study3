@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>property-conf-study</artifactId>
+    <artifactId>property-study</artifactId>
 
 
 </project>
