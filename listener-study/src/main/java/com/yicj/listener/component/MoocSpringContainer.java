@@ -19,7 +19,7 @@ public class MoocSpringContainer implements ApplicationListener<ContextRefreshed
         moocSpringContainer = this ;
     }
 
-    public MoocSpringContainer getInstance(){
+    public static MoocSpringContainer getInstance(){
         return moocSpringContainer ;
     }
 

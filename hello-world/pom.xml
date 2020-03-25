@@ -28,12 +28,6 @@
             <artifactId>jstl</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>net.bytebuddy</groupId>
-            <artifactId>byte-buddy</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
         <!-- spring 单元测试 start -->
         <!--<dependency>
             <groupId>org.springframework.boot</groupId>
