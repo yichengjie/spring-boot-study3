@@ -22,6 +22,7 @@
         <module>property-study</module>
         <module>exception-study</module>
         <module>config-study</module>
+        <module>web-study</module>
     </modules>
 
     <groupId>com.yicj.study</groupId>
