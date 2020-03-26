@@ -21,6 +21,7 @@
         <module>startup-study</module>
         <module>property-study</module>
         <module>exception-study</module>
+        <module>config-study</module>
     </modules>
 
     <groupId>com.yicj.study</groupId>
