@@ -1,0 +1,1 @@
+org.springframework.boot.SpringBootExceptionReporter=com.yicj.exception.demo4.MyExceptionReporter

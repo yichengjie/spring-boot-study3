@@ -1,4 +1,4 @@
-package com.yicj.property.ex;
+package com.yicj.exception.demo2;
 
 public class CException extends Exception {
 

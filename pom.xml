@@ -20,6 +20,7 @@
         <module>listener-study</module>
         <module>startup-study</module>
         <module>property-study</module>
+        <module>exception-study</module>
     </modules>
 
     <groupId>com.yicj.study</groupId>
