@@ -23,6 +23,7 @@
         <module>exception-study</module>
         <module>config-study</module>
         <module>web-study</module>
+        <module>starter-study</module>
     </modules>
 
     <groupId>com.yicj.study</groupId>
