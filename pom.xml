@@ -24,6 +24,7 @@
         <module>web-study</module>
         <module>starter-study</module>
         <module>weather-starter</module>
+        <module>mybatis-starter</module>
     </modules>
 
     <groupId>com.yicj.study</groupId>
