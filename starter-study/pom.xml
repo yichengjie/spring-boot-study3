@@ -11,5 +11,13 @@
 
     <artifactId>starter-study</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.yicj.study</groupId>
+            <artifactId>weather-starter</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 
 </project>

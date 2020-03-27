@@ -14,7 +14,6 @@
 
     <modules>
         <module>hello-world</module>
-        <module>simple-api</module>
         <module>bean-study</module>
         <module>Initializer-study</module>
         <module>listener-study</module>
@@ -24,6 +23,7 @@
         <module>config-study</module>
         <module>web-study</module>
         <module>starter-study</module>
+        <module>weather-starter</module>
     </modules>
 
     <groupId>com.yicj.study</groupId>
@@ -83,6 +83,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

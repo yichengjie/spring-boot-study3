@@ -1,15 +1,12 @@
-package com.yicj.starter;
+package com.yicj.weather;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StarterApplication {
-
+public class WeatherApplication {
     public static void main(String[] args) {
-        SpringApplication.run(StarterApplication.class, args);
+
+        SpringApplication.run(WeatherApplication.class,args) ;
     }
-
 }
-
-
