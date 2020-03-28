@@ -3,7 +3,15 @@ package com.yicj.mybatis.bean;
 import lombok.ToString;
 
 @ToString
-public class Demo {
+public class User {
+
+    public User (){
+
+    }
+    public User(Integer id){
+        this.id = id ;
+    }
+
     private Integer id;
 
     private String name;
@@ -33,7 +41,4 @@ public class Demo {
     public void setJob(String job) {
         this.job = job == null ? null : job.trim();
     }
-
-
-
 }

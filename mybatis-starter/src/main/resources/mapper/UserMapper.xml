@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yicj.mybatis.mapper.DemoMapper">
-  <resultMap id="BaseResultMap" type="com.yicj.mybatis.bean.Demo">
+<mapper namespace="com.yicj.mybatis.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.yicj.mybatis.bean.User">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="job" jdbcType="VARCHAR" property="job" />
@@ -67,13 +67,13 @@
   <sql id="Base_Column_List">
     id, name, job
   </sql>
-  <select id="selectByExample" parameterType="com.yicj.mybatis.bean.DemoExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.yicj.mybatis.bean.UserExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from demo
+    from user
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -84,27 +84,27 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from demo
+    from user
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from demo
+    delete from user
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.yicj.mybatis.bean.DemoExample">
-    delete from demo
+  <delete id="deleteByExample" parameterType="com.yicj.mybatis.bean.UserExample">
+    delete from user
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.yicj.mybatis.bean.Demo">
-    insert into demo (id, name, job
+  <insert id="insert" parameterType="com.yicj.mybatis.bean.User">
+    insert into user (id, name, job
       )
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{job,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.yicj.mybatis.bean.Demo">
-    insert into demo
+  <insert id="insertSelective" parameterType="com.yicj.mybatis.bean.User">
+    insert into user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
@@ -128,14 +128,14 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.yicj.mybatis.bean.DemoExample" resultType="java.lang.Long">
-    select count(*) from demo
+  <select id="countByExample" parameterType="com.yicj.mybatis.bean.UserExample" resultType="java.lang.Long">
+    select count(*) from user
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update demo
+    update user
     <set>
       <if test="record.id != null">
         id = #{record.id,jdbcType=INTEGER},
@@ -152,7 +152,7 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update demo
+    update user
     set id = #{record.id,jdbcType=INTEGER},
       name = #{record.name,jdbcType=VARCHAR},
       job = #{record.job,jdbcType=VARCHAR}
@@ -160,8 +160,8 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.yicj.mybatis.bean.Demo">
-    update demo
+  <update id="updateByPrimaryKeySelective" parameterType="com.yicj.mybatis.bean.User">
+    update user
     <set>
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
@@ -172,8 +172,8 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.yicj.mybatis.bean.Demo">
-    update demo
+  <update id="updateByPrimaryKey" parameterType="com.yicj.mybatis.bean.User">
+    update user
     set name = #{name,jdbcType=VARCHAR},
       job = #{job,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}

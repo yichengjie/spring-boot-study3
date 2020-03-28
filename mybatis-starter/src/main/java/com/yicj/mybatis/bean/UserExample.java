@@ -3,14 +3,14 @@ package com.yicj.mybatis.bean;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DemoExample {
+public class UserExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public DemoExample() {
+    public UserExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
