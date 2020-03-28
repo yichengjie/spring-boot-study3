@@ -25,6 +25,8 @@
         <module>starter-study</module>
         <module>weather-starter</module>
         <module>mybatis-starter</module>
+        <module>webflux-study</module>
+        <module>logging-study</module>
     </modules>
 
     <groupId>com.yicj.study</groupId>

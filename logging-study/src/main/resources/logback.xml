@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration >
+    <appender name="CONSOLE-LOG" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>[%d{yyyy-MM-dd' 'HH:mm:ss.sss}] [%C] [%t] [%L] [%-5p] %m%n</pattern>
+<!--            <pattern>%data{HH:mm:ss} %contextName [%t] %p %logger[36] - %msg%n </pattern>-->
+        </layout>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="CONSOLE-LOG" />
+    </root>
+</configuration>
