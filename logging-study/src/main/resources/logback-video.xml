@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration scan = "true" scanPeriod="60 seconds" debug ="false">
+    <contextName>user</contextName>
+    <property resource="application.properties" />
+    <property name="LOG_PATH" value ="${logging.path:-${user.home}/${spring.application.name}/logs}" />
+    <property name="log_file" value="${logging.file:-${LOG_PATH}/application.log}" />
+
+
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%data{HH:mm:ss} %contextName [%t] %p %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="APPLICATION" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_FILE}</file>
+        <encoder>
+            <pattern>%data{HH:mm:ss} %contextName [%t] %p %logger{36} - %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>7</maxHistory>
+            <maxFileSize>50MB</maxFileSize>
+            <totalSizeCap>20GB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+
+    <logger name ="com.yicj.log.controller" level ="error" additivity="true">
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="APPLICATION" />
+    </root>
+</configuration>
