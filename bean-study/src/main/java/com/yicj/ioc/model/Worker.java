@@ -1,10 +1,10 @@
-package com.yicj.ioc.ann;
+package com.yicj.ioc.model;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
 @Component
-@ Data
+@Data
 public class Worker {
 
     private String name ;

@@ -1,0 +1,21 @@
+1. 系统如未配置applicationEventMulticaster，
+   则this.applicationEventMulticaster = new SimpleApplicationEventMulticaster(beanFactory);
+
+
+2. getBean获取所有的BeanPostProcessor
+
+   2.1 如果是InstantiationAwareBeanPostProcessor
+       则执行postProcessBeforeInstantiation生产bean，否则返回null
+
+   2.1执行 InstantiationAwareBeanPostProcessor.postProcessBeforeInstantiation
+     执行                   BeanPostProcessor.postProcessAfterInitialization
+
+
+   2.3 如果InstantiationAwareBeanPostProcessor.postProcessBeforeInstantiation没有返回合适对象,
+
+       则执行doCreateBean方法 -> initializeBean -> {
+            processor.postProcessBeforeInitialization(result, beanName);
+            invokeInitMethods(beanName, wrappedBean, mbd);
+            wrappedBean = applyBeanPostProcessorsAfterInitialization(wrappedBean, beanName);
+       }
+

@@ -1,5 +1,6 @@
 package com.yicj.ioc.ann;
 
+import com.yicj.ioc.model.Worker;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
 import org.springframework.stereotype.Component;
@@ -7,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyBeanPostProcessor implements InstantiationAwareBeanPostProcessor {
 
-    @Override
+    @Override   //postProcessBeforeInitialization
     public Object postProcessBeforeInstantiation(Class<?> beanClass, String beanName) throws BeansException {
         if(beanName.equals("worker")){
             return new Worker() ;
