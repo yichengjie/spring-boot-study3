@@ -9,7 +9,8 @@ import org.springframework.context.annotation.Import;
 @Import(MyBeanImport.class)
 public class IocApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(IocApplication.class,args) ;
+    public static void main(String[] args)  {
+        new SpringApplication(IocApplication.class).run(args) ;
     }
+
 }
