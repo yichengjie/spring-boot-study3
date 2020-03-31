@@ -15,6 +15,7 @@ public class FirstInitializer implements ApplicationContextInitializer<Configura
     @Override
     public void initialize(ConfigurableApplicationContext applicationContext) {
         ConfigurableEnvironment environment = applicationContext.getEnvironment();
+
         //向环境中添加必备属性，如果没有配置则会报错，可以在application.properties中添加
         environment.setRequiredProperties("mooc");
         Map<String,Object> map = new HashMap<>() ;
