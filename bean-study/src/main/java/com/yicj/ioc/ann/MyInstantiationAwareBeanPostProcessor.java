@@ -6,7 +6,7 @@ import org.springframework.beans.factory.config.InstantiationAwareBeanPostProces
 import org.springframework.stereotype.Component;
 
 @Component
-public class MyBeanPostProcessor implements InstantiationAwareBeanPostProcessor {
+public class MyInstantiationAwareBeanPostProcessor implements InstantiationAwareBeanPostProcessor {
 
     @Override   //postProcessBeforeInitialization
     public Object postProcessBeforeInstantiation(Class<?> beanClass, String beanName) throws BeansException {
