@@ -1,6 +1,7 @@
 package com.yicj.ioc.service;
 
 import com.yicj.ioc.model.Animal;
+import com.yicj.ioc.model.Dog;
 import com.yicj.ioc.model.Student;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
