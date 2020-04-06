@@ -27,7 +27,6 @@
         <module>mybatis-starter</module>
         <module>webflux-study</module>
         <module>logging-study</module>
-        <module>aop-study</module>
     </modules>
 
     <groupId>com.yicj.study</groupId>
