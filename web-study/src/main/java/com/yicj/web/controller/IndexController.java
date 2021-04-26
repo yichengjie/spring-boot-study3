@@ -1,9 +1,10 @@
 package com.yicj.web.controller;
 
 import com.yicj.web.model.ExportMemberVo;
-import com.yicj.web.view.ExcelView;
-import com.yicj.web.view.UserInfoExcelView;
+import com.yicj.web.view.excel.ExcelView;
+import com.yicj.web.view.excel.UserInfoExcelView;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -17,7 +18,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @Controller
 public class IndexController {
 
-    @RequestMapping(value = "", method = RequestMethod.GET)
+    @GetMapping("/excel")
     public ModelAndView download() {
         List<ExportMemberVo> list = new ArrayList<ExportMemberVo>();
         for (int i = 0; i < 5; i++) {
@@ -30,11 +31,15 @@ public class IndexController {
             exportMemberVo.setBankName("建设银行");
             list.add(exportMemberVo);
         }
-
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("members", list);
         map.put("name", "魅力城市");
         ExcelView excelView = new UserInfoExcelView();
         return new ModelAndView(excelView, map);
+    }
+
+    @GetMapping("/hello")
+    public String hello(){
+        return "hello/world" ;
     }
 }
