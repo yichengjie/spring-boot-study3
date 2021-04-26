@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 注意 plugins 在配置文件中的位置
+        properties?, settings?, typeAliases?, typeHandlers?, objectFactory?, objectWrapperFactory?, plugins?, environments?, databaseIdProvider?, mappers? -->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <plugins>
+        <!--<plugin interceptor="com.yicj.mybatis.plugins.MyStatementHandlerPlugin">
+            <property name="someProperty" value="100"/>
+        </plugin>-->
+        <plugin interceptor="com.yicj.mybatis.plugins.MyParameterHandlerPlugin" />
+    </plugins>
+</configuration>
